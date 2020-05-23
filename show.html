@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script src='./out.json'></script>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+const kSize = 2;
+const dSize = 200
+for (lines of layers) {
+    for(i = 0; i < lines.length; i++) {
+        ctx.moveTo(lines[i][0][0]*kSize+dSize,lines[i][0][1]*kSize+dSize);
+        ctx.lineTo(lines[i][1][0]*kSize+dSize,lines[i][1][1]*kSize+dSize);
+    }
+}
+
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
