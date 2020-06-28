@@ -13,13 +13,15 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 const kSize = 2;
 const dSize = 200
-for (lines of layers) {
-    for(i = 0; i < lines.length; i++) {
-        ctx.moveTo(lines[i][0][0]*kSize+dSize,lines[i][0][1]*kSize+dSize);
-        ctx.lineTo(lines[i][1][0]*kSize+dSize,lines[i][1][1]*kSize+dSize);
-    }
+for (curves of layers) {
+    for (lines of curves) {
+        ctx.moveTo(lines[0][0]*kSize+dSize,lines[0][1]*kSize+dSize);
+        for(i = 1; i < lines.length; i++) {
+            ctx.lineTo(lines[i][0]*kSize+dSize,lines[i][1]*kSize+dSize);
+        }
 }
 
+}
 ctx.stroke();
 
 </script>
