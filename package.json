@@ -1,15 +1,36 @@
 {
-  "name": "stl2gcode",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "stl-slicer",
+  "version": "2.0.0",
+  "description": "Slice STL models into flat sheets (with gaps) for laser/CNC cutting and gluing into large sculptures. Exports SVG, DXF and G-code, adds alignment guide holes.",
+  "type": "module",
+  "bin": {
+    "stl-slicer": "./cli.js"
   },
-  "keywords": [],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/*.test.js",
+    "cli": "node cli.js"
+  },
+  "keywords": [
+    "stl",
+    "slicer",
+    "laser",
+    "cnc",
+    "svg",
+    "dxf",
+    "gcode",
+    "sculpture"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "stl": "^1.1.1"
+    "clipper-lib": "^6.4.2",
+    "jszip": "^3.10.2",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
   }
 }
